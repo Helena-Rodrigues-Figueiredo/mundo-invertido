@@ -30,4 +30,9 @@ btnForm.addEventListener('click', async () => {
   };
 
   await subscribeToHellfireClub(subscription);
+
+  name.value = '';
+  email.value = '';
+  level.value = '';
+  character.value = '';
 });
