@@ -18,7 +18,7 @@
           Vecna. Você está preparado? Então clique no botão abaixo para entrar
           no Mundo Invertido!
         </p>
-        <button id="switch-theme-button" onclick="switchTheme()">Inverter Mundos</button>
+        <button id="switch-theme-button">Inverter Mundos</button>
       </div>
 
       <div id="top-characters" class="world-characters"></div>
@@ -99,20 +99,20 @@
           <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo<span></span></h3>
 
           <div class="form-container">
-            <form action="">
+            <form>
               <label for="name">Nome Completo</label>
-              <input type="text" name="name">
+              <input type="text" name="name" id="name">
 
               <label for="email">E-mail</label>
-              <input type="email" name="email">
+              <input type="email" name="email" id="email">
 
               <label for="level">Level</label>
-              <input type="text" name="level">
+              <input type="number" name="level" id="level">
 
               <label for="character">Personagem</label>
-              <textarea name="character" cols="30" rows="10"></textarea>
+              <textarea name="character" cols="30" rows="10" id="character"></textarea>
             
-              <button>Me inscrever</button>
+              <button type="button" id="btn-form">Me inscrever</button>
             </form>
           </div>
         </div>
@@ -128,6 +128,6 @@
     </footer>
 
     <audio id="music" src="./musics/normal-world.mpeg" autoplay></audio>
-
+    <script src="script.js"></script>
   </body>
 </html>
