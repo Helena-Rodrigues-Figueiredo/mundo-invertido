@@ -1,3 +1,5 @@
+import { subscribeToHellfireClub } from './firebase/hellfire-club.js';
+
 const name = document.getElementById('name');
 const email = document.getElementById('email');
 const level = document.getElementById('level');
@@ -19,12 +21,13 @@ bntSwitchTheme.addEventListener('click', () => {
   audio.volume = 0.2;
 });
 
-btnForm.addEventListener('click', () => {
-    const subscription = {
-        name: name.value,
-        email: email.value,
-        level: level.value,
-        character: character.value,
-    }
-    console.log(subscription);
+btnForm.addEventListener('click', async () => {
+  const subscription = {
+    name: name.value,
+    email: email.value,
+    level: level.value,
+    character: character.value,
+  };
+
+  await subscribeToHellfireClub(subscription);
 });
